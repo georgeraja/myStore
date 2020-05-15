@@ -10,10 +10,10 @@ class SignIn extends Component {
 
     this.state = {
       email: "",
-      password: ""
+      password: "",
     };
   }
-  handleSubmit = async event => {
+  handleSubmit = async (event) => {
     event.preventDefault();
     const { email, password } = this.state;
     try {
@@ -25,7 +25,7 @@ class SignIn extends Component {
     this.setState({ email: "", password: "" });
   };
 
-  handleChange = event => {
+  handleChange = (event) => {
     const { value, name } = event.target;
     this.setState({ [name]: value });
   };
